@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.containter {
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container img {
+    width: 200px;
+    height: auto;
+    margin-left: 50px;
+}
+
+header {
+    background: #808080;
+}
+
+header::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding-top: 30px;
+    margin-right: 75px;
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+}
