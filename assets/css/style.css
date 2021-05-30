@@ -1,24 +1,34 @@
-body {
+* {
+    padding: 0;
     margin: 0;
-    background: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    color: #fff;
 }
 
-.containter {
-    width: 80%;
+body {
+    background: #7c3e1d;;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    display: block;
+}
+
+section {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container {
     max-width: 1440px;
     margin: 0 auto;
 }
 
 .container img {
-    width: 200px;
+    width: 250px;
     height: auto;
     margin-left: 50px;
 }
 
 header {
-    background: #808080;
+    background: #7c3e1d;
 }
 
 header::after {
@@ -39,11 +49,12 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: 18px;
 }
 
 nav li {
     display: inline-block;
-    padding-top: 30px;
+    padding-top: 33px;
     margin-right: 75px;
 }
 
@@ -51,4 +62,101 @@ nav a {
     color: whitesmoke;
     text-decoration: none;
     text-transform: uppercase;
+    border-bottom: transparent solid 1px;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: #62a4ab;
+    border-bottom:#62a4ab solid 2px;
+}
+
+/* Banner Image */
+
+.backgroundImage {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.bannerText h1 {
+    position: absolute;
+    top: 250px;
+    left: 59%;
+    padding: 10px;
+    color: #fff;
+    background-color: #7c3e1d;
+}
+
+/* About Me Section */
+
+.flexbox-container {
+    display: flex;
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.flexbox-heading {
+    flex: 1;
+    min-height: 100px;
+    max-width: 20%;
+    text-align: right;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-right: 35px;
+    border-right: 3px solid #fff;
+}
+
+.flexbox-aboutmetext {
+    flex: 1;
+    min-height: 100px;
+    max-width: 80%;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+
+/* Work Section */
+
+.multiverse {
+    flex: 1;
+    position: absolute;
+    background-color: #62a4ab;
+    padding: 20px;
+}
+
+.flexbox-primary {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    overflow: hidden;
+}
+
+.primary {
+    flex: 1;
+    max-height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    border: #62a4ab solid 5px;
+}
+
+
+
+
+/* Contact Me Section */
+
+.flexbox-info {
+    text-align: center;
+    padding-top: 40px;
+    margin-left: 25px;
+}
+
+.flexbox-info:hover {
+    color: #62a4ab;
+    text-decoration: underline #62a4ab solid 2px;
 }
