@@ -41,9 +41,9 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 ## Mock Images
 
-![Fullscreen Landing Page] (assets/images/fullscreen.png)
+![Fullscreen Landing Page] (/assets/images/fullscreen.png)
 
-![Responsive Layout] (assets/images/mobile.png)
+![Responsive Layout] (/assets/images/mobile.png)
 
 
 
