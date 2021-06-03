@@ -1,14 +1,14 @@
 * {
     padding: 0;
     margin: 0;
-    color: #fff;
 }
 
 body {
-    background: #7c3e1d;;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    background: #262626;;
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    display: block;
 }
 
 section {
@@ -16,147 +16,365 @@ section {
     margin-right: 50px;
 }
 
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.container img {
-    width: 250px;
-    height: auto;
-    margin-left: 50px;
-}
+/* Header Section & Nav Bar */
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px; 
     background: #7c3e1d;
 }
 
-header::after {
-    content: " ";
-    display: table;
-    clear: both;
-}
-
 .logo {
-    float: left;
+    cursor: pointer;
+    width: 250px;
 }
 
 nav {
-    float: right;
+
+    background: #7c3e1d;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
+    padding: 5px 20px 0 20px;
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
-    font-size: 18px;
 }
 
-nav li {
-    display: inline-block;
-    padding-top: 33px;
-    margin-right: 75px;
+nav ul li {
+    padding: 10px 20px;
+    border-bottom: transparent solid 2px;
 }
 
-nav a {
-    color: whitesmoke;
-    text-decoration: none;
+nav ul li a {
     text-transform: uppercase;
-    border-bottom: transparent solid 1px;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+nav ul li:hover {
+    border-bottom:#fff solid 2px;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        height: 240px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  }
+
+/* Hero Image */
+
+.banner {
+    width: 100%;
+}
+
+.banner > .banner-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.banner > .banner-text {
+    color: #fff;
+    background-color: #7c3e1d;
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    float: right;
     padding: 5px;
 }
 
-nav a:hover {
+/* About Me Section */ 
+
+.aboutMe {
+    display: flex;
+    color: #fff;
+    padding: 0 0 20px 0;
+}
+
+.aboutMe h2 {
+    display: flex;
+    width: 20%;
+    font-size: 36px;
+    padding: 20px;
+    text-align: right;
+    border-right: 2px solid #fff;
+    justify-content: flex-end;
+}
+
+.aboutMe p {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 20px;
+}
+
+/* About me media queries */
+
+@media screen and (max-width: 768px) {
+    .aboutMe {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe h2 {
+        width: 100%;
+        justify-content: center;
+        border-right: hidden;
+        border-bottom: 2px solid #fff;
+        padding: 0 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Hero Image */
+
+.hero {
+    display: flex;
+    color: #fff;   
+}
+
+.hero h2 {
+    display: flex;
+    width: 20%;
+    font-size: 36px;
+    padding: 20px;
+    justify-content: flex-end;
+    border-right: 2px solid #fff;
+}
+
+.flexbox-container {
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+.hero-image {
+    flex: 1 1 60%;
+    max-width: 100%;
+    display: flex;
+    object-fit: contain;
+    border: #62a4ab solid 3px;
+    justify-content: flex-start;
+    background-color: #62a4ab;
+}
+
+.hero-text {
+    color: #fff;
+    background-color: #62a4ab;
+    position: sticky;
+    padding: 10px;
+    top: 80%;
+    right: 10%;
+    height: 100px;
+}
+ 
+/* Hero Image Hover */ 
+
+.hero-image:hover {
+    opacity: 0.7;
+}
+
+/* Work Media Queries */
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero h2 {
+        width: 100%;
+        justify-content: center;
+        border-right: hidden;
+        border-bottom: 2px solid #fff;
+        padding: 0 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flexbox-container {
+        width: 100%;
+    }
+}
+
+/* Collection of work */
+
+.portfolio {
+    display: flex;
+    color: #fff;   
+    padding-top: 20px;
+}
+
+.portfolio h2 {
+    display: flex;
+    width: 20%;
+    border-right: 2px solid #fff;
+}
+
+/* Grid */ 
+
+.grid {
+    max-width: 100%
+}
+
+.image-grid {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.grid-image {
+    display: block;
+    flex-basis: 46%;
+    margin: 20px 0 20px 20px;
+    border: #62a4ab solid 2px;
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Grid hover */
+
+.grid-image:hover {
+    opacity: 0.7;
+}
+
+/* Grid media queries */
+
+@media screen and (max-width: 768px) {
+    .portfolio {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio h2 {
+        width: 100%;
+        justify-content: center;
+        border-right: hidden;
+        border-bottom: 2px solid #fff;
+        padding: 0 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-image {
+        margin: 10px 0 10px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Grid Text */
+
+.grid-text {
+    background: #62a4ab;
+    height: 20px;
+    position: sticky;
+    right: 60%;
+}
+
+/* Contact Me */ 
+
+.contactMe {
+    display: flex;
+    color: #fff;
+    padding: 0 0 20px 0;
+}
+
+.contactMe h2 {
+    display: flex;
+    width: 20%;
+    font-size: 36px;
+    padding: 20px;
+    text-align: right;
+    border-right: 2px solid #fff;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+footer li {
+    display: inline-block; 
+    margin-top: 30px;
+    margin-left: 25px; 
+}
+    
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+    border-bottom: transparent solid 1px;
+}
+
+footer a:hover {
     color: #62a4ab;
     border-bottom:#62a4ab solid 2px;
 }
 
-/* Banner Image */
+/* Contact me media queries */
 
-.backgroundImage {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
+@media screen and (max-width: 768px) {
+    .contactMe {
+        flex-direction: column;
+    }
 }
 
-.bannerText h1 {
-    position: absolute;
-    top: 250px;
-    left: 59%;
-    padding: 10px;
-    color: #fff;
-    background-color: #7c3e1d;
+@media screen and (max-width: 768px) {
+    .contactMe h2 {
+        width: 100%;
+        justify-content: center;
+        border-right: hidden;
+        border-bottom: 2px solid #fff;
+        padding: 0 20px 20px 20px;
+    }
 }
 
-/* About Me Section */
-
-.flexbox-container {
-    display: flex;
-}
-
-.flexbox-item {
-    width: 200px;
-    margin: 10px;
-    padding-top: 10px;
-}
-
-.flexbox-heading {
-    flex: 1;
-    min-height: 100px;
-    max-width: 20%;
-    text-align: right;
-    font-size: 40px;
-    padding-top: 10px;
-    padding-right: 35px;
-    border-right: 3px solid #fff;
-}
-
-.flexbox-aboutmetext {
-    flex: 1;
-    min-height: 100px;
-    max-width: 80%;
-    font-size: 18px;
-    padding-left: 15px;
-}
-
-
-/* Work Section */
-
-.multiverse {
-    flex: 1;
-    position: absolute;
-    background-color: #62a4ab;
-    padding: 20px;
-}
-
-.flexbox-primary {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 25px;
-    overflow: hidden;
-}
-
-.primary {
-    flex: 1;
-    max-height: auto;
-    object-fit: cover;
-    overflow: hidden;
-    border: #62a4ab solid 5px;
-}
-
-
-
-
-/* Contact Me Section */
-
-.flexbox-info {
-    text-align: center;
-    padding-top: 40px;
-    margin-left: 25px;
-}
-
-.flexbox-info:hover {
-    color: #62a4ab;
-    text-decoration: underline #62a4ab solid 2px;
+@media screen and (max-width: 768px) {
+    .footer ul {
+        width: 100%;
+        justify-content: center;
+    }
 }
